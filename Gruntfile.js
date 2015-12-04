@@ -53,15 +53,6 @@ module.exports = function(grunt){
                 }
             }
         },
-        autoprefixer: {
-            options: {
-                browsers: ['last 2 version']
-            },
-            dist: {
-                src: 'views/css/production.css',
-                dest: 'views/css/compatable.css'
-            }
-        },
         htmlmin: {
             dist: {
                 options: {
