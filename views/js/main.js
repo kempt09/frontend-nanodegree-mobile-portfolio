@@ -546,7 +546,7 @@ function logAverageFrame(times) {
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   'use strict';
-  var items = document.getElementsByClassName('mover');
+  var items = document.querySelectorAll('.mover');
   var itemLength = items.length;
   var topScroll = document.body.scrollTop;
   var i;
@@ -574,7 +574,7 @@ document.addEventListener('DOMContentLoaded', function() {
   'use strict';
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 50; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
@@ -582,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    document.getElementById("movingPizzas1").appendChild(elem);
   }
   updatePositions();
 });
